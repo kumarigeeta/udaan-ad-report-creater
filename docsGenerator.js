@@ -2,6 +2,7 @@ const PizZip = require('pizzip');
 const Docxtemplater = require('docxtemplater');
 
 const fs = require('fs');
+const fse = require('fs-extra');
 const path = require('path');
 
 
@@ -36,6 +37,8 @@ module.exports = function (data) {
 
     const buf = doc.getZip()
         .generate({type: 'nodebuffer'});
+
+    fse.ensureDirSync(path.resolve(__dirname, 'dist'));
 
     // buf is a nodejs buffer, you can either write it to a file or do anything else with it.
     fs.writeFileSync(path.resolve(__dirname, 'dist', `${data.companyName} (${data.dateStr}).docx`), buf);
