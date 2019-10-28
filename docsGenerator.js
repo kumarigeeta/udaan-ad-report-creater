@@ -8,7 +8,7 @@ const path = require('path');
 module.exports = function (data) {
     //Load the docx file as a binary
     const content = fs
-        .readFileSync(path.resolve(__dirname, 'resources/templete.docx'), 'binary');
+        .readFileSync(path.resolve(__dirname, 'templete.docx'), 'binary');
 
     const zip = new PizZip(content);
 
