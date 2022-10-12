@@ -12,7 +12,7 @@
   "dependencies": {
     "csvtojson": "^2.0.10",
     "docx": "^5.0.0-rc7",
-    "docxtemplater": "^3.14.3",
+    "docxtemplater": "^3.31.4",
     "dotty": "^0.1.0",
     "fs-extra": "^8.1.0",
     "lodash": "^4.17.15",
